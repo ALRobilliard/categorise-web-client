@@ -11,4 +11,4 @@ COPY . ./
 RUN yarn build
 
 RUN yarn global add serve
-RUN serve -l $PORT -s build
+CMD serve -l $PORT -s build
