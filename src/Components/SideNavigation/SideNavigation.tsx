@@ -4,6 +4,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Drawer from '@material-ui/core/Drawer';
 import Divider from '@material-ui/core/Divider';
 import NavigationLinks from '../NavigationLinks/NavigationLinks';
+import * as SidebarImg from '../../sidebar.jpg';
 
 interface IProps {
   user?: UserDto;
@@ -22,7 +23,8 @@ const useStyles = makeStyles((theme) => ({
   },
   drawerPaper: {
     width: drawerWidth,
-    backgroundColor: '#689f38',
+    backgroundImage: `url(${SidebarImg})`,
+    backgroundPosition: 'right',
     boxShadow: '3px 0 4px 0 #888',
     WebkitBoxShadow: '3px 0 4px 0 #888',
     color: '#ffffff',
