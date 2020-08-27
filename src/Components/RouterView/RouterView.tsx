@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
+import Accounts from '../Accounts/Accounts';
 import SignIn from '../SignIn/SignIn';
 
 interface IProps {
   refreshUser: Function;
-  user?: object;
+  user?: UserDto;
 }
 
 interface IState {}
@@ -32,6 +33,10 @@ class RouterView extends Component<IProps, IState> {
 
     return (
       <Switch>
+        <Route
+          path='/accounts'
+          render={(props) => <Accounts {...props} user={this.props.user} />}
+        />
         <Route
           path='/signin'
           render={(props) => (
